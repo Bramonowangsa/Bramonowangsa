@@ -1,0 +1,65 @@
+#include<iostream>
+
+using namespace std;
+
+int main ()
+{
+	float c,k,f;
+	string asal,ks,tujuan;
+	
+	cout<<"Masukkan skala asal (C,K,F) = ";
+	cin>>asal;
+	if (asal=="c"||asal=="C")
+	{
+		cout<<"Masukkan suhu dalam C = ";
+		cin>>c;
+		cout<<"Masukkan skala Tujuan = ";
+		cin>>tujuan;
+		if (tujuan=="K"||tujuan=="k")
+		{
+			k=c+273.15;
+			cout<<c<<" derajat C sama dengan "<<k<<" derajat K ";	
+		}
+		else if (tujuan=="F"||tujuan=="f")
+		{
+			f=9/5*c+32;
+			cout<<c<<" derajat C sama dengan "<<f<<" derajat F ";
+		}
+	}
+	else if (asal=="k"||asal=="K")
+	{
+		cout<<" Masukkan Suhu Asal Dalam K = ";
+		cin>>k;
+		cout<<" Masukkan Skala Tujuan = ";
+		cin>>tujuan;
+		if (tujuan=="C"||tujuan=="c")
+		{
+		
+			c=k-273.15;
+			cout<<" derajat K sama dengan "<<c<<" derajat c "<<endl;
+		}
+		else if (tujuan=="f"||tujuan=="F")
+		{
+			f=(k-273.15)*9/5+32;
+			cout<<k<<" derajat K sama dengan "<<f<<" derajat F ";
+	}	}
+		
+	else if (asal=="f"||asal=="F")
+	{
+		cout<<" Masukkan Suhu Asal Dalam F = ";
+		cin>>f;
+		cout<<" Masukkan Skala Tujuan = ";
+		cin>>tujuan;
+		if (tujuan=="C"||tujuan=="c")
+		{
+			c=(f-32)*5/9;
+			cout<<f<<" derajat F sama dengan "<<c<<" derajat C "<<endl;
+		}
+		else if (tujuan=="K"||tujuan=="k")
+		{
+			k=(f-32)*5/9+273.15;
+			cout<<f<<" derajat F sama dengan "<<k<<" derajat K ";
+		}	
+	}
+	
+}
